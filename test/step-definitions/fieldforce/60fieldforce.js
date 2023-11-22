@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import FieldForcePage from "../../../src/pageobjects/fieldforce/fieldforce.page";
 import FormFieldForcePage from "../../../src/pageobjects/fieldforce/formfieldforce.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId("[PRINCIPAL] 60. CRUD Field Force");

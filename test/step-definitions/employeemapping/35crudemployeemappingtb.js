@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import EmployeeMappingPage from "../../../src/pageobjects/employeemapping/employeemapping.page";
 import FormEmployeeMappingPage from "../../../src/pageobjects/employeemapping/form.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 import { frameHome, frameForm } from "../../helper/commands";
 
 // use allure API for allure reporter

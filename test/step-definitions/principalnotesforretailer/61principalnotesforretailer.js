@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import PrincipalNotesforRetailerPage from "../../../src/pageobjects/principalnotesforretailer/principalnotesforretailer.page";
 import FormPrincipalNotesforRetailerPage from "../../../src/pageobjects/principalnotesforretailer/formprincipalnotesforretailer.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId("[PRINCIPAL] 61. CRUD Principal Notes for Retailer");

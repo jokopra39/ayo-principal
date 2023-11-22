@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import KPISettingPage from "../../../src/pageobjects/kpisetting/kpisetting.page";
 import FormSearchKPISettingPage from "../../../src/pageobjects/kpisetting/formsearchkpisetting.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId("[PRINCIPAL] 5321. KPI Setting Group List");

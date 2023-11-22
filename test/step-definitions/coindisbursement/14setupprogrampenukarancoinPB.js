@@ -4,7 +4,7 @@ import CoinDisbursementPage from "../../../src/pageobjects/coindisbursement/coin
 import FormCoinDisbursementPage from "../../../src/pageobjects/coindisbursement/formcoindisbursement.page";
 import SubGTPPage from "../../../src/pageobjects/subgtp/subgtp.page";
 
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

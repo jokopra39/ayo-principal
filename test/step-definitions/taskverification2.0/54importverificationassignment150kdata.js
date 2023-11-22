@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import VerificationAssignmentPage from "../../../src/pageobjects/taskverification2.0/verificationassignment.page";
 import DetailVerificationAssignmentPage from "../../../src/pageobjects/taskverification2.0/detailverificationassignment.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

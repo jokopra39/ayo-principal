@@ -6,7 +6,7 @@ import VerificationAssignmentPage from "../../../src/pageobjects/taskverificatio
 import DetailVerificationAssignmentPage from "../../../src/pageobjects/taskverification2.0/detailverificationassignment.page";
 import VerificationApprovalPage from "../../../src/pageobjects/taskverification2.0/verificationapproval.page";
 import TaskSequencingPage from "../../../src/pageobjects/tasksequencing/tsm.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

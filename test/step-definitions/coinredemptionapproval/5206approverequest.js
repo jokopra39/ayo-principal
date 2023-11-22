@@ -3,7 +3,7 @@ import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import CoinRedemptionApprovalPage from "../../../src/pageobjects/coinredemptionapproval/coinredemptionapproval.page";
 import CoinDisbursementPage from "../../../src/pageobjects/coindisbursement/coindisbursement.page";
 import { frameHome, frameForm } from "../../helper/commands";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

@@ -4,7 +4,7 @@ import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import TaskSequencingPage from "../../../src/pageobjects/tasksequencing/tsm.page";
 import FormCreatePage from "../../../src/pageobjects/tasksequencing/formcreate.page";
 import MissionBuilderPage from "../../../src/pageobjects/tasksequencing/missionbuilder.page";
-const dteData = require("../../testdata/dte.data");
+const dteData = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

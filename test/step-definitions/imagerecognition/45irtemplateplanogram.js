@@ -7,7 +7,7 @@ import FormMasterBrandPage from "../../../src/pageobjects/imagerecognition/maste
 import TemplatePlanogramPage from "../../../src/pageobjects/imagerecognition/templateplanogram.page";
 import FormTemplatePlanogramPage from "../../../src/pageobjects/imagerecognition/templateplanogramform.page";
 import loginPage from "../../../src/pageobjects/login/login.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 import { frameHome, frameForm } from "../../helper/commands";
 
 // use allure API for allure reporter

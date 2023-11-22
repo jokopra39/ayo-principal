@@ -8,7 +8,7 @@ import TaskSequencingPage from "../../../src/pageobjects/tasksequencing/tsm.page
 import FormCreatePage from "../../../src/pageobjects/tasksequencing/formcreate.page";
 import MissionBuilderPage from "../../../src/pageobjects/tasksequencing/missionbuilder.page";
 import { frameHome, frameForm, pause } from "../../helper/commands";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 //Scenario Outline: As a user, I can create and edit Sub GTP
 it('I am on the Sub GTP page', async () => {

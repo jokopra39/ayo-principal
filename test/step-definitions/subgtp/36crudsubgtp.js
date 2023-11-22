@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import SubGTPPage from "../../../src/pageobjects/subgtp/subgtp.page";
 import FormSubGTPPage from "../../../src/pageobjects/subgtp/form.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 import { frameHome, frameForm } from "../../helper/commands";
 
 // use allure API for allure reporter

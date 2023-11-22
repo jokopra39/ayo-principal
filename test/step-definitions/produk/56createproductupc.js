@@ -6,7 +6,7 @@ import FormProdukPage from "../../../src/pageobjects/produk/formproduk.page";
 import TemplateTugasPage from "../../../src/pageobjects/templatetugas/templatetugas.page";
 import FormTemplateTugasPage from "../../../src/pageobjects/templatetugas/formtemplatetugas.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

@@ -3,7 +3,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import spinthewheelPage from "../../../src/pageobjects/spinthewheel/spinthewheel.page";
 import RewardCoinNoncoinXP from "../../../src/pageobjects/spinthewheel/75crud-spinthewheel(reward-coin-noncoin-dan-xp).page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");

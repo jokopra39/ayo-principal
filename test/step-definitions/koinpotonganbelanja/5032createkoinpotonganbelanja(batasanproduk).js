@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import formKoinPotonganBelanjaPage from "../../../src/pageobjects/koinpotonganbelanja/formkoinpotonganbelanja.page";
 import koinPotonganBelanjaPage from "../../../src/pageobjects/koinpotonganbelanja/koinpotonganbelanja.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId(

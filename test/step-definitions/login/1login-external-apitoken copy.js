@@ -7,7 +7,7 @@ import MainmenuPage from '../../../src/pageobjects/mainmenu.page';
 
 import { assert } from "chai";
 import UserAPI from "../../../src/pageobjects/login/user.api.js";
-import * as data from "../../testdata/apiuser.data.js";
+import * as data from "../../data-test/apiuser.data.js";
 
 it('I am on the login page Ayo SRC', async () => {    
     await LoginPage.open()

@@ -2,7 +2,7 @@ import LoginPage from "../../../src/pageobjects/login/login.page";
 import CallToActionPage from "../../../src/pageobjects/calltoaction/cta.page";
 import FormCTAPage from "../../../src/pageobjects/calltoaction/formcta.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 allureReporter.addLabel("Positive Case");
 allureReporter.addTestId("[PRINCIPAL] 59. CRUD CTA");

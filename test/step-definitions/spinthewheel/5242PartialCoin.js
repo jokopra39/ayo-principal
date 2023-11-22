@@ -4,7 +4,7 @@ import SpinTheWheelPage from "../../../src/pageobjects/spinthewheel/spinthewheel
 import FormSpinTheWheelPage from "../../../src/pageobjects/spinthewheel/form.page";
 import TradeProgramPage from "../../../src/pageobjects/tradeprogram/tradeprogram";
 import FormTradeProgramPage from "../../../src/pageobjects/tradeprogram/formtradeprogram.page";
-const dataTest = require("../../testdata/dte.data");
+const dataTest = require("../../data-test/dte.data");
 
 // use allure API for allure reporter
 allureReporter.addLabel("Positive Case");
