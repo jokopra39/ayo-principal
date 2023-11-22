@@ -1,23 +1,20 @@
 import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 
-// use allure API for allure reporter
-allureReporter.addLabel("Positive Case");
-allureReporter.addTestId("[PRINCIPAL] 01a");
-allureReporter.addFeature("Success sign out from The Principal SRC website");
+describe("[PRINCIPAL] 0a - Success sign out from The Principal SRC website", () => {
+  it("I am on The Principal Ayo SRC website", async () => {
+    await LoginPage.open();
+    await LoginPage.setLclStorage();
+    await MainmenuPage.open();
+    await MainmenuPage.dashboard();
+    await LoginPage.acceptCookie();
+  });
 
-it("I am on The Principal Ayo SRC website", async () => {
-  await LoginPage.open();
-  await LoginPage.setLclStorage();
-  await MainmenuPage.open();
-  await MainmenuPage.dashboard();
-  await LoginPage.acceptCookie();
-});
+  it("I sign out from The Principal Ayo Src website", async () => {
+    await MainmenuPage.signOut();
+  });
 
-it("I sign out from The Principal Ayo Src website", async () => {
-  await MainmenuPage.signOut();
-});
-
-it("System should be leading to Home page Ayo Src", async () => {
-  await LoginPage.welcome();
+  it("System should be leading to Home page Ayo Src", async () => {
+    await LoginPage.welcome();
+  });
 });
