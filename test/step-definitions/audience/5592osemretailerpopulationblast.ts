@@ -1,4 +1,3 @@
-import { Given, When, Then } from "@wdio/cucumber-framework";
 import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import OsemPage from "../../../src/pageobjects/audience/osem.page";

@@ -60,7 +60,7 @@ class MasterGroupPage extends Page {
       timeout: 10000,
       timeoutMsg: "expected title page not displayed after 6s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async pageList() {

@@ -139,7 +139,7 @@ class FormAudiencePage extends Page {
       timeout: 20000,
       timeoutMsg: "expected title page not existing after 20s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async pageCreate() {

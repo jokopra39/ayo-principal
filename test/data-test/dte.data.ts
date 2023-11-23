@@ -455,19 +455,12 @@ module.exports = {
 
     //Scenario 104 (cari task yang btn Verifnya enabled)
     searchByTsmName104: "create tsm tipe kecuali upc dan ir",
-    samplingAmount: "100",
     approverName2: "Tia Wicaksono",
     approverName5: "sisda utrujah",
-    missionAmount: "1",
     deadline2: "24-07-2023",
-    statusRequested: "requested",
-    statusApproved: "approved",
 
     //Scenario 105 (cari task yang btn Verifnya enabled)
     searchByTsmName105: "105 Testing TSM REDA reblast off",
-    samplingAmount: "100",
-    approverName2: "Tia Wicaksono",
-    missionAmount: "1",
 
     //Scenario 101 (cari task yang btn Verifnya enabled)
     searchByTsmName101: "misi reda checklist",
@@ -659,8 +652,6 @@ module.exports = {
 
     //Scenario 49
     nameUPC: "HWKND-Mission UPC 092023",
-    coinSubmission47: "5",
-    coinVerification47: "10",
 
     //Scenario 26, 28
     statusAktif: "AKTIF",

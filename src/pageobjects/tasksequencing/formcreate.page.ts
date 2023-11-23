@@ -1,5 +1,5 @@
 import Page from "../page";
-import { setStartEndDateTime, setDropdown, pause } from "../../helper/commands";
+import { setStartEndDateTime, pause } from "../../helper/commands";
 const path = require("path");
 
 //sub page containing specific selectors and methods for a specific page
@@ -159,7 +159,7 @@ class FormCreatePage extends Page {
   async page() {
     await this.titlePage.waitForExist();
     await this.titlePage.waitForDisplayed();
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async clickData() {
@@ -185,13 +185,13 @@ class FormCreatePage extends Page {
   async formAddPage() {
     await this.titlePage.waitForExist();
     await this.titlePage.waitForDisplayed();
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
     await expect(browser).toHaveUrlContaining("dte/task-sequencing/create");
     await expect(this.titlePage).toHaveText("Buat Task Sequencing");
   }
 
   async formEditPage() {
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
     await expect(this.titlePage).toHaveText("Ubah Task Sequencing");
     await expect(browser).toHaveUrlContaining("dte/task-sequencing/edit");
   }
@@ -201,17 +201,15 @@ class FormCreatePage extends Page {
       timeout: 20000,
       timeoutMsg: "expected title page page not displayed after 20s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
     await expect(browser).toHaveUrlContaining("dte/task-sequencing/detail");
     await expect(this.titlePage).toHaveText("Detail Task Sequencing");
   }
 
   async createTSM(
-    nameTSM,
-    tradeProgram,
-    groupAudience,
-    valueSearchTP,
-    valueSearchAudience
+    nameTSM: string,
+    tradeProgram: string,
+    groupAudience: string,
   ) {
     await this.inputNama.setValue(nameTSM);
     await pause();
@@ -242,7 +240,7 @@ class FormCreatePage extends Page {
     );
   }
 
-  async editTSM2(nameTSM) {
+  async editTSM2(nameTSM: string) {
     await this.inputNama.addValue("");
     await this.inputNama.setValue(nameTSM);
     await browser.pause(3000);
@@ -286,7 +284,7 @@ class FormCreatePage extends Page {
     await pause();
   }
 
-  async userPenerimaCoinAdj(reasonImportCoin, namaPenerimaImported) {
+  async userPenerimaCoinAdj(reasonImportCoin: string, namaPenerimaImported: string) {
     await this.datatableHeaderImportCoin.scrollIntoView();
     await this.rowTableImportedCoin[0].waitForExist(); //row 1 list imported xls, di-command karna window size terlalu lebar sehingga hanya tampil sedikit
     await this.reasonImportCoin.setValue(reasonImportCoin);

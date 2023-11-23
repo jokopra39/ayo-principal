@@ -111,7 +111,7 @@ class FormDTEAutomationPage extends Page {
       timeout: 60000,
       timeoutMsg: "expected title page not displayed after 60s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async pageCreateNonTsm() {

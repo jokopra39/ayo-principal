@@ -1,4 +1,3 @@
-import { Given, When, Then } from "@wdio/cucumber-framework";
 import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
 import FlushCoinPage from "../../../src/pageobjects/flushcoin/flushcoin.page";
@@ -24,20 +23,20 @@ it('I click button Tambah', async function () {
 });
 
 it('I am on form create Flush Coin page, input and submit data', async function () {
-    await frameForm();
-    await FlushCoinPage.inputLotteryprogram("Program Undian Jadi Lebih Baik");
-    await FlushCoinPage.inputFieldTabSetupFlushCoin(0, [
-      "131221 Trade Program PBO",
-      "for testing kelvin 2023 2",
-    ]);
-    await FlushCoinPage.inputFieldTabSetupFlushCoin(1, [
-      "for testing kelvin 2023 2",
-    ]);
-    await FlushCoinPage.inputFieldTabSetupFlushCoin(2, [
-      "for testing kelvin 2023 2",
-    ]);
-    await FlushCoinPage.simpan();
-  }
+  await frameForm();
+  await FlushCoinPage.inputLotteryprogram("Program Undian Jadi Lebih Baik");
+  await FlushCoinPage.inputFieldTabSetupFlushCoin(0, [
+    "131221 Trade Program PBO",
+    "for testing kelvin 2023 2",
+  ]);
+  await FlushCoinPage.inputFieldTabSetupFlushCoin(1, [
+    "for testing kelvin 2023 2",
+  ]);
+  await FlushCoinPage.inputFieldTabSetupFlushCoin(2, [
+    "for testing kelvin 2023 2",
+  ]);
+  await FlushCoinPage.simpan();
+}
 );
 
 it('Click tab Audience, input and execute data', async function () {
@@ -70,27 +69,27 @@ it('I click button 'Tambah' again', async function () {
 });
 
 it('I am on form create Flush Coin page, input and submit data again', async function () {
-    await frameForm();
-    await FlushCoinPage.inputLotteryprogram("Program Undian Jadi Lebih Baik");
-    await FlushCoinPage.inputFieldTabSetupFlushCoin(0, [
-      "131221 Trade Program PBO",
-      "for testing kelvin 2023 2",
-    ]);
-    await FlushCoinPage.inputFieldTabSetupFlushCoin(1, [
-      "for testing kelvin 2023 2",
-    ]);
-    await FlushCoinPage.inputFieldTabSetupFlushCoin(2, [
-      "for testing kelvin 2023 2",
-    ]);
-    await FlushCoinPage.simpan();
-  }
+  await frameForm();
+  await FlushCoinPage.inputLotteryprogram("Program Undian Jadi Lebih Baik");
+  await FlushCoinPage.inputFieldTabSetupFlushCoin(0, [
+    "131221 Trade Program PBO",
+    "for testing kelvin 2023 2",
+  ]);
+  await FlushCoinPage.inputFieldTabSetupFlushCoin(1, [
+    "for testing kelvin 2023 2",
+  ]);
+  await FlushCoinPage.inputFieldTabSetupFlushCoin(2, [
+    "for testing kelvin 2023 2",
+  ]);
+  await FlushCoinPage.simpan();
+}
 );
 
 it('Click tab Audience, click fixed panel, input and execute data', async function () {
-    await frameForm();
-    await FlushCoinPage.tabAudience();
-    await FlushCoinPage.clickFixedPanel("fixed-panel");
-    await FlushCoinPage.importCsvFixedPanel();
-    await FlushCoinPage.prosesAudience();
-  }
+  await frameForm();
+  await FlushCoinPage.tabAudience();
+  await FlushCoinPage.clickFixedPanel("fixed-panel");
+  await FlushCoinPage.importCsvFixedPanel();
+  await FlushCoinPage.prosesAudience();
+}
 );

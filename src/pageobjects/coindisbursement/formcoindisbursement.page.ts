@@ -177,7 +177,7 @@ class FormCoinDisbursementPage extends Page {
       timeout: 20000,
       timeoutMsg: "expected title page not displayed after 20s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async pageCreate() {
@@ -187,11 +187,11 @@ class FormCoinDisbursementPage extends Page {
 
   async pageEdit() {
     async () => await this.titlePageEdit.isDisplayed(),
-      {
-        timeout: 20000,
-        timeoutMsg: "expected title page not displayed after 20s",
-      };
-    await expect(this.titlePageEdit).toBeDisplayed({ timeout: 6000 });
+    {
+      timeout: 20000,
+      timeoutMsg: "expected title page not displayed after 20s",
+    };
+    await expect(this.titlePageEdit).toBeDisplayed();
     await expect(this.titlePageEdit).toHaveText("Ubah Coin Disbursement");
     await expect(browser).toHaveUrlContaining("dte/coin-disbursement/edit");
   }

@@ -1,4 +1,3 @@
-import { expectChai } from "chai";
 import Page from "../page";
 import { pause } from "../../helper/commands";
 
@@ -71,7 +70,7 @@ class TaskSequencingPage extends Page {
       timeout: 1000000,
       timeoutMsg: "expected search input not displayed after 3000s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async page2() {
@@ -79,7 +78,7 @@ class TaskSequencingPage extends Page {
       timeout: 1000000,
       timeoutMsg: "expected search input not displayed after 3000s",
     });
-    await expect(this.searchInput).toBeDisplayed({ timeout: 6000 });
+    await expect(this.searchInput).toBeDisplayed();
   }
 
   async pageList() {
@@ -97,10 +96,6 @@ class TaskSequencingPage extends Page {
     await expect(this.titlePage).toHaveText("Task Sequencing");
     await browser.pause(3000);
     //await expect(browser).toHaveUrlContaining('dte/task-sequencing')
-  }
-
-  async getAlert() {
-    const alertSuccess = await browser.getAlertText();
   }
 
   async tabDefault() {
@@ -121,12 +116,12 @@ class TaskSequencingPage extends Page {
     await this.btnCreate.click();
   }
 
-  async searchTaskSequencing(taskSequencingName) {
+  async searchTaskSequencing(taskSequencingName: string) {
     await this.searchInput.setValue(taskSequencingName);
     await pause();
   }
 
-  async searchResult(taskSequencingName) {
+  async searchResult(taskSequencingName: string) {
     await browser.waitUntil(
       async () => await this.dataCell[0].$("div > span").isExisting(),
       {
@@ -152,16 +147,16 @@ class TaskSequencingPage extends Page {
     await this.btnRequestFile.scrollIntoView();
     await browser.pause(10000);
   }
-  async detailTask(taskSequencingName) {
+  async detailTask(taskSequencingName: string) {
     //click name
     await browser.pause(10000);
     //await expect(this.dataCell[0].$('div > span')).toBeExisting();
-    //await expect(this.dataCell[0].$('div > span')).toHaveText(taskSequencingName);
+    await expect(this.dataCell[0].$('div > span')).toHaveText(taskSequencingName);
     // await this.dataCell[0].$("div > span").scrollIntoView();
     await this.kolomNama[0].click();
   }
 
-  async editTask(nameTSM) {
+  async editTask(nameTSM: string) {
     //click edit button
     await this.searchInput.setValue(nameTSM);
     await pause();
@@ -171,7 +166,7 @@ class TaskSequencingPage extends Page {
     await pause();
   }
 
-  async editStatus(statusTsm) {
+  async editStatus(statusTsm: string) {
     //click edit button by status
     // await this.filterStatus.waitForExist();
     // await expect(this.filterStatus).toBeClickable()

@@ -217,11 +217,11 @@ class MissionBuilderPage extends Page {
     await expect(this.btnMisi).toBeClickable();
     await this.btnMisi.click();
     await pause();
-    await expect(this.cardMission).toBeDisplayed({ timeout: 6000 });
+    await expect(this.cardMission).toBeDisplayed();
     await this.btnEnd.waitForClickable();
     await expect(this.btnEnd).toBeClickable();
     await this.btnEnd.click();
-    await expect(this.cardFinish).toBeDisplayed({ timeout: 6000 });
+    await expect(this.cardFinish).toBeDisplayed();
     await pause();
   }
 
@@ -241,18 +241,18 @@ class MissionBuilderPage extends Page {
     await expect(this.btnMisi).toBeClickable();
     await this.btnMisi.click();
     await pause();
-    await expect(this.cardMission).toBeDisplayed({ timeout: 6000 });
+    await expect(this.cardMission).toBeDisplayed();
     await this.btnEnd.waitForClickable();
     await expect(this.btnEnd).toBeClickable();
     await this.btnEnd.click();
-    await expect(this.cardFinish).toBeDisplayed({ timeout: 6000 });
+    await expect(this.cardFinish).toBeDisplayed();
     await pause();
     await this.btnYaTidak[1].click();
     await pause();
     await this.btnWaktuTunggu.waitForClickable();
     await expect(this.btnWaktuTunggu).toBeClickable();
     await this.btnWaktuTunggu.click();
-    await expect(this.cardMission).toBeDisplayed({ timeout: 6000 });
+    await expect(this.cardMission).toBeDisplayed();
     await this.btnEnd.waitForClickable();
     await expect(this.btnEnd).toBeClickable();
     await this.btnEnd.click();

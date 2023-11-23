@@ -140,9 +140,7 @@ describe("[PRINCIPAL] 5206. Sub Group Trade Program", () => {
     await FormCreatePage.createTSM(
       dataTest.data5206.tsmNama,
       dataTest.data5206.tpNama,
-      dataTest.data5206.tsmAudience,
-      "",
-      ""
+      dataTest.data5206.tsmAudience
     );
     await FormCreatePage.submitTsm();
   });
@@ -200,9 +198,7 @@ describe("[PRINCIPAL] 5206. Sub Group Trade Program", () => {
     await FormCreatePage.createTSM(
       dataTest.data5206.tsmNama2,
       dataTest.data5206.tpNama2,
-      dataTest.data5206.tsmAudience,
-      "",
-      ""
+      dataTest.data5206.tsmAudience
     );
     await FormCreatePage.submitTsm();
   });

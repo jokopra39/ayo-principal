@@ -1,9 +1,9 @@
-import LoginPage from "../../../src/pageobjects/login/login.page";
-import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
-import SubGTPPage from "../../../src/pageobjects/subgtp/subgtp.page";
-import FormSubGTPPage from "../../../src/pageobjects/subgtp/form.page";
-import CoinRedemptionApprovalPage from "../../../src/pageobjects/coinredemptionapproval/coinredemptionapproval.page";
-const dataTest = require("../../data-test/dte.data");
+import LoginPage from "../../../src/pageobjects/login/login.page"
+import MainmenuPage from "../../../src/pageobjects/mainmenu.page"
+import SubGTPPage from "../../../src/pageobjects/subgtp/subgtp.page"
+import FormSubGTPPage from "../../../src/pageobjects/subgtp/form.page"
+import CoinRedemptionApprovalPage from "../../../src/pageobjects/coinredemptionapproval/coinredemptionapproval.page"
+const dataTest = require("../../data-test/dte.data")
 
 //Scenario Outline: As a user, I can edit Sub GTP
 describe("[PRINCIPAL] 97. Edit Sub Group Trade Program", () => {

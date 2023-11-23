@@ -76,7 +76,7 @@ class CoinDisbursementPage extends Page {
       timeout: 300000,
       timeoutMsg: "expected title page not displayed after 300s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async pageList() {
@@ -100,11 +100,6 @@ class CoinDisbursementPage extends Page {
     await expect(this.datatableBody).toBeExisting();
     await expect(this.dataRow).toBeExisting();
   }
-
-  // async getAlert () {
-  //     const alertSuccess = await browser.getAlertText();
-  //     console.log(alertSuccess);
-  // }
 
   async createNew() {
     await this.btnCreate.waitForExist();
@@ -140,13 +135,13 @@ class CoinDisbursementPage extends Page {
     await this.btnImport[0].waitForDisplayed();
   }
 
-  async search(namaProgramPenukaranKoin) {
+  async search(namaProgramPenukaranKoin: string) {
     await this.searchInput[1].scrollIntoView();
     await this.searchInput[1].setValue(namaProgramPenukaranKoin);
     // await browser.pause(3000)
   }
 
-  async searchResult(namaProgramPenukaranKoin) {
+  async searchResult(namaProgramPenukaranKoin: string) {
     await browser.waitUntil(async () => await this.dataCell[0].isExisting(), {
       timeout: 20000,
       timeoutMsg: "expected search result not displayed after 20s",
@@ -161,7 +156,7 @@ class CoinDisbursementPage extends Page {
   //     console.log('Status' + await this.statusTask.toHaveText(status))
   // }
 
-  async editATask(namaProgramPenukaranKoin) {
+  async editATask(namaProgramPenukaranKoin: string) {
     await this.cellNamaProgram.scrollIntoView();
     console.log("List Coin Disbursement: ");
     const titleTask = await this.namaProgramPenukaran;
@@ -186,7 +181,7 @@ class CoinDisbursementPage extends Page {
     await browser.pause(10000);
   }
 
-  async editStatus(statusTsm) {
+  async editStatus(statusTsm: string) {
     //click edit button by status
     // await this.filterStatus.waitForExist();
     // await expect(this.filterStatus).toBeClickable()

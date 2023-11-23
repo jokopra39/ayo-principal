@@ -65,7 +65,7 @@ class EmployeeMappingPage extends Page {
       timeout: 600000,
       timeoutMsg: "expected title page not displayed after 600s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async pageList() {
@@ -74,10 +74,10 @@ class EmployeeMappingPage extends Page {
     await browser.pause(3000);
     await browser.switchToFrame(0);
     await browser.pause(3000);
-    async () => await expect(this.searchInput).isDisplayed({ timeout: 6000 }),
-      {
-        timeoutMsg: "expected search input not displayed after 600s",
-      };
+    async () => await expect(this.searchInput).isDisplayed(),
+    {
+      timeoutMsg: "expected search input not displayed after 600s",
+    };
     await expect(this.btnCreate).toBeExisting();
     await expect(this.titlePage).toHaveText("Employee Mapping");
     await expect(browser).toHaveUrlContaining("dte/employee-mapping");

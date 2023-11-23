@@ -39,7 +39,7 @@ class TradeProgramPage extends Page {
       timeout: 60000,
       timeoutMsg: "expected title page not displayed after 20s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
   }
 
   async page2() {
@@ -47,7 +47,7 @@ class TradeProgramPage extends Page {
       timeout: 20000,
       timeoutMsg: "expected title page not displayed after 20s",
     });
-    await expect(this.searchInput).toBeDisplayed({ timeout: 6000 });
+    await expect(this.searchInput).toBeDisplayed();
   }
 
   async pageList() {

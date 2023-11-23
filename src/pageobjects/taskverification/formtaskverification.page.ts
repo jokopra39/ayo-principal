@@ -216,7 +216,7 @@ class FormTaskVerificationPage extends Page {
       timeout: 10000,
       timeoutMsg: "expected title page page not displayed after 10s",
     });
-    await expect(this.titlePage).toBeDisplayed({ timeout: 6000 });
+    await expect(this.titlePage).toBeDisplayed();
     await expect(browser).toHaveUrlContaining("dte/template-task/create");
     await browser.pause(5000);
   }
