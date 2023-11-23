@@ -121,7 +121,7 @@ class FormEmployeeMappingPage extends Page {
     await browser.keys("Escape");
   }
 
-  async metodeTB() {
+  async metodeTB(value: string) {
     await this.drpdwnMetode[1].scrollIntoView();
     await this.drpdwnMetode[1].click();
     await pause();
