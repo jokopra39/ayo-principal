@@ -4,45 +4,45 @@ import KPISettingPage from "../../../src/pageobjects/kpisetting/kpisetting.page"
 import FormKPISettingPage from "../../../src/pageobjects/kpisetting/formkpisetting.page";
 const dataTest = require("../../data-test/dte.data");
 
-allureReporter.addLabel("Positive Case");
-allureReporter.addTestId("[PRINCIPAL] 63. KPI Setting");
-allureReporter.addFeature("KPI Setting");
-
 // Scenario Outline: As a user, I can create, read, update and delete field force
-it("I am on KPI Setting page", async () => {
-  await KPISettingPage.open();
-  await LoginPage.setLclStorage();
-  await MainmenuPage.open();
-  await MainmenuPage.dashboard();
-  await LoginPage.acceptCookie();
-  await MainmenuPage.KPISetting();
-  await browser.pause(10000);
-  await KPISettingPage.page();
-});
+describe("[PRINCIPAL] 63. KPI Setting", () => {
+  before("Iam login", async () => {
+    // await LoginPage.open();
+    await KPISettingPage.open();
+    await LoginPage.setLclStorage();
+    await MainmenuPage.open();
+    await LoginPage.acceptCookie();
+  });
 
-it("I click button Buat", async () => {});
+  it("I am on KPI Setting page", async () => {
+    await MainmenuPage.KPISetting();
+    await browser.pause(10000);
+    await KPISettingPage.page();
+  });
 
-it("System should be leading to form Create KPI Setting", async () => {});
+  // it("I click button Buat", async () => {});
 
-it("I am on form Create KPI Setting page", async () => {});
+  // it("System should be leading to form Create KPI Setting", async () => {});
 
-it("I input form and submit", async () => {
-  await FormKPISettingPage.createKPI(dataTest.kpiSetting.brand);
-  await FormKPISettingPage.submitKPI();
-});
+  // it("I am on form Create KPI Setting page", async () => {});
 
-it("System should be able to submit form KPI Setting and leading to KPI Setting page", async () => {
-  await browser.pause(10000);
-});
+  it("I input form and submit", async () => {
+    await FormKPISettingPage.createKPI(dataTest.kpiSetting.brand);
+    await FormKPISettingPage.submitKPI();
+    await browser.pause(10000);
+  });
 
-it("I edit KPI Setting", async () => {
-  await KPISettingPage.editKPI();
-  await FormKPISettingPage.editKPI();
-  await FormKPISettingPage.submitKPI();
-  await browser.pause(30000);
-  await KPISettingPage.page();
-});
+  // it("System should be able to submit form KPI Setting and leading to KPI Setting page", async () => {});
 
-it("System should be update KPI Setting", async () => {
-  await KPISettingPage.expectNewKPIEdited(dataTest.kpiSetting.statusEdit);
+  it("I edit KPI Setting", async () => {
+    await KPISettingPage.editKPI();
+    await FormKPISettingPage.editKPI();
+    await FormKPISettingPage.submitKPI();
+    await browser.pause(30000);
+    await KPISettingPage.page();
+  });
+
+  it("System should be update KPI Setting", async () => {
+    await KPISettingPage.expectNewKPIEdited(dataTest.kpiSetting.statusEdit);
+  });
 });

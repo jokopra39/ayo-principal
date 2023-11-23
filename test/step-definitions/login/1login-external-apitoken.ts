@@ -1,22 +1,25 @@
 import LoginPage from "../../../src/pageobjects/login/login.page";
 import MainmenuPage from "../../../src/pageobjects/mainmenu.page";
+import VerifikasiPerangkatPage from "../../../src/pageobjects/login/verifaccount.page";
 
-it("I am on the login page Ayo SRC", async () => {
-  await LoginPage.open();
-  await LoginPage.welcome();
-  await LoginPage.acceptCookie();
-  await browser.pause(5000);
-});
+describe("[PRINCIPAL] 1a - Login external API Token", () => {
+  it("I am on the login page Ayo SRC", async () => {
+    await LoginPage.open();
+    await LoginPage.welcome();
+    await LoginPage.acceptCookie();
+    await browser.pause(5000);
+  });
 
-it("I login internal", async () => {
-  await LoginPage.loginapi();
-});
+  it("I login internal", async () => {
+    await LoginPage.loginapi();
+  });
 
-it("I input verification code (.*) and submit", async (code) => {
-  await VerifikasiPerangkatPage.verif(code);
-});
+  it("I input verification code (.*) and submit", async (code) => {
+    await VerifikasiPerangkatPage.verif(code);
+  });
 
-it("System should be leading to Dashboard page and show Account Name (.*)", async (accountname) => {
-  await MainmenuPage.dashboard(accountname);
-  await browser.pause(8000);
+  it("System should be leading to Dashboard page and show Account Name (.*)", async (accountname) => {
+    await MainmenuPage.dashboard(accountname);
+    await browser.pause(8000);
+  });
 });
