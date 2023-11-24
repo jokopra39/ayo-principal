@@ -10,11 +10,11 @@ describe("[PRINCIPAL] 09. Approval Coin Adjustment - Approve Request Approval", 
     await LoginPage.open();
     await LoginPage.setLclStorage();
     await MainmenuPage.open();
-    await LoginPage.acceptCookie();
   });
 
   it("I am on Approval Coin Adjustment page", async () => {
     await MainmenuPage.dashboard();
+    await LoginPage.acceptCookie();
     await MainmenuPage.approvalCoinAdjustment();
     await ApprovalCoinAdjPage.page();
   });
